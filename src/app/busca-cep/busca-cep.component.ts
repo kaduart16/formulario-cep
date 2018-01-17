@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CepService } from '../cep.service';
 import { Cep } from '../cep';
 
+
 @Component({
   selector: 'app-busca-cep',
   templateUrl: './busca-cep.component.html',
@@ -14,5 +15,8 @@ export class BuscaCepComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  buscar() {
+    this.cepService.buscar(this.cep.cep)
+        .then((cep: Cep) => this.cep = cep);
+  }
 }

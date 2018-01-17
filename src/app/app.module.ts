@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BuscaCepModule } from './busca-cep/busca-cep.module';
 import { CepService } from './cep.service';
+
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { CepService } from './cep.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    [ FormsModule ],
     BuscaCepModule,
     HttpModule
   ],
